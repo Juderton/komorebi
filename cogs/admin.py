@@ -10,11 +10,11 @@ class Admin(commands.Cog):
     @app_commands.command(description='Reloads an extension')
     async def reload(self,
                      interaction: Interaction,
-                     extension: Literal['admin'],
+                     extension: Literal['admin', 'images'],
                      sync_commands: bool):
 
         if interaction.user.id == 688832593570955354:
-            content = f'Reloading `{extension}` extension'
+            content = f'Reloading `{extension}` extension...'
             await interaction.response.send_message(content=content)
             await self.bot.reload_extension(f'cogs.{extension}')
             content = f'{content}\nDone'

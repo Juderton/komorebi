@@ -6,7 +6,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix='/', intents=intents)
-token = open('token.txt').readline()
+token = open('tokens/bot_token.txt').readline()
 
 
 @bot.event
