@@ -10,7 +10,7 @@ class Admin(commands.Cog):
     @app_commands.command(description='Reloads an extension')
     async def reload(self,
                      interaction: Interaction,
-                     extension: Literal['admin', 'fun', 'images', 'logging'],
+                     extension: Literal['admin', 'fun', 'images', 'logging', 'roles'],
                      sync_commands: bool):
 
         if interaction.user.id == 688832593570955354:
